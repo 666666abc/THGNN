@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import time
 import math
 import os
-import HTGNN_f
+import thgnn
 from data_loader_CMAPSS_graph import CMPDataIter_graph
 from data_loader_NCMAPSS_graph import NCMPDataIter_graph
 import argparse
@@ -95,7 +95,7 @@ class Train():
         self.test_loader = tr.utils.data.DataLoader(dataset=test_data_loader, batch_size=args.batch_size,
                                                     shuffle=False, drop_last=False,
                                                     num_workers=0)
-        self.net = HTGNN_f.HTGNNModel(self.args).to(tr.device(self.args.device))
+        self.net = thgnn.HTGNNModel(self.args).to(tr.device(self.args.device))
 
         # for name, param in self.net.named_parameters():
         #     print(f"Layer: {name}, Parameter Shape: {param.shape}")
