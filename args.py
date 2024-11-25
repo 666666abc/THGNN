@@ -18,7 +18,7 @@ def args():
     args.add_argument('--sub_idx',default=1, type = int)
 
     # for HTGNN
-    args.add_argument('--model_name', type=str, default='htgnn')
+    args.add_argument('--model_name', type=str, default='thgnn')
     # args.add_argument('--device', type=int, default=0)
     args.add_argument('--device', type=int, default=0)
     args.add_argument('--lr', type=float, default=5e-4)
